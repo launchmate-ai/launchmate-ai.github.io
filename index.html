@@ -50,7 +50,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
+            padding-bottom: 0;
         }
 
         .logo {
@@ -58,6 +58,8 @@
             max-width: 480px; 
             height: auto;
             margin-bottom: 2rem;
+            /* Use a negative percentage of the viewport height */
+            margin-top: -8vh;
             /* Subtle shadow to help the logo pop against the dark bg */
             filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
         }
