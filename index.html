@@ -39,7 +39,10 @@
         }
 
         .container {
-            padding: 2rem 1rem;
+            width: 100%;
+            max-width: 650px;
+            padding: 2rem 5% ; /* Uses percentage for side padding on mobile */
+            margin: 0 auto;
             max-width: 650px;
             z-index: 1;
             flex-grow: 1; 
@@ -47,10 +50,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
         }
 
         .logo {
-            width: 480px;
+            width: 100%;
+            max-width: 480px; 
             height: auto;
             margin-bottom: 2rem;
             /* Subtle shadow to help the logo pop against the dark bg */
@@ -72,9 +77,13 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            /* Change: Fluid font size so it doesn't clip on small phones */
+            font-size: clamp(2.5rem, 10vw, 3.5rem);
+            width: 100%;
             margin: 0 0 1rem 0;
+            margin-bottom: 1rem;
             letter-spacing: -2px;
+            line-height: 1.1;
             font-weight: 800;
             background: linear-gradient(to bottom, #ffffff, #cbd5e1);
             -webkit-background-clip: text;
@@ -82,12 +91,15 @@
         }
 
         p {
-            font-size: 1.2rem;
+            width: 100%;
+            max-width: 500px;
+            margin: 0.5rem auto;
+            font-size: clamp(1rem, 4vw, 1.2rem);
             color: var(--text-dim);
             line-height: 1.6;
             font-weight: 400;
         }
-
+        
         .footer {
             width: 100%;
             padding: 2rem 0;
